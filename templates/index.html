@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <title>ripsom</title>
+</head>
+<body>
+    <header>
+        <a href="https://t.me/RipSom">
+            <img src="{{ url_for('static', filename='telegram_icon.png') }}" alt="Telegram" width="64" height="64">
+        </a>
+        <a href="mailto:gyrygraf@gmail.com">
+            <img src="{{ url_for('static', filename='mail_icon.png') }}" alt="Mail" width="64" height="64">
+        </a>
+        <a href="https://discordapp.com/users/1018222057663766609">
+            <img src="{{ url_for('static', filename='discord_icon.png') }}" alt="Discord" width="64" height="64">
+        </a>
+        <a href="https://github.com/rip6som">
+            <img src="{{ url_for('static', filename='github_icon.png') }}" alt="Github" width="64" height="64">
+        </a>
+    </header>
+
+
+
+    <main>
+
+        <section id="greeting">
+            <img src="{{ url_for('static', filename='frieren_sit.png') }}" alt="Frieren" class="frieren-sit" width="24%">
+            <div class="h1greeting">
+                <b>
+                    <span class="greeting-text active">Hello</span>
+                    <span class="greeting-text">Hallo</span>
+                    <span class="greeting-text">Привет</span>
+                    <span class="greeting-text">Привіт</span>
+                </b>
+            </div>
+            <div class="h2greeting">
+                <span class="greeting-text active">My name is Dmytro/ripsom</span> <!-- Надо будет сделать ещё чтобы между дмитро и рипсом они менялись в случайные моменты. -->
+                <span class="greeting-text">Meine Name ist Dmytro/ripsom</span> <!-- Ну тоже самое с языками -->
+                <span class="greeting-text">Мое имя Дмитрий/рипсом</span>
+                <span class="greeting-text">Моє ім'я Дмитро/ріпсом</span>
+            </div>
+            <div class="h2greeting">
+                Young programmer <!-- это статично -->
+            </div>
+        </section>
+
+        <section id="bio">
+            <div class="h1bio">
+                <b>
+                    Bio
+                </b>
+            </div>
+            <div class="h2bio">
+                Тут будет био
+            </div>
+        </section>
+        <img src="{{ url_for('static', filename='background.jpeg') }}" alt="background" class="background-img" width="100%">
+        <div id="flexbox">
+            <section id="projects">
+                <div class="grid">
+                    {% for repo in repos %}
+                        <a href="{{ repo.html_url }}">
+                            <div class="cardp">
+                                <div class="h1card">
+                                    <b>
+                                        {{ repo.name }}
+                                    </b>
+                                </div>
+                                <div class="h2card">
+                                    {% if repo.description %}
+                                        {{ repo.description }}
+                                    {% else %}
+
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </section>
+            <section id="skills">
+                <div class="grid">
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>English:</b> B1-B2
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>German:</b> B1-B2
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>Russian:</b> C2
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>Ukrainian:</b> C1
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>CSS:</b> Junior
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>HTML:</b> Junior
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>Python:</b> Middle
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>pygame:</b> Junior
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>Telegram-bots:</b> Junior
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>Discord-bots:</b> Junior
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>Machine-learning:</b> Junior
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>Flask:</b> Junior
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>SQL:</b> Junior
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>Algorithms:</b> Middle
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="h2card">
+                            <b>OOP:</b> Middle
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+    <footer>
+         <img src="{{ url_for('static', filename='frieren_kiss.png') }}" alt="Frieren" class="frieren-kiss" width="500">
+    </footer>
+<script src="{{ url_for('static', filename='script.js') }}">
+
+</script>
+</body>
+</html>

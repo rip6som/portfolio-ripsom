@@ -1,0 +1,155 @@
+html {
+    background-color: #f5f3f7;
+}
+header {
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  padding: 10px 16px;
+  background: #6b5b95;
+  color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+.h1greeting {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 100px;
+    color: #cb92de;
+    height: 140px;
+}
+.h1greeting .greeting-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.h1greeting .greeting-text.active {
+    opacity: 1;
+}
+.h2greeting {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 70px;
+    color: #d3ade0;
+    height: 110px;
+}
+.h2greeting .greeting-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.h2greeting .greeting-text.active {
+    opacity: 1;
+}
+.h1bio {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 30px;
+
+}
+.h2bio {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #d8d3e0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+#flexbox {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.cardp {
+    position: relative;
+    z-index: 2;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #d8d3e0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    width: 94.4%;
+    height: 90px;
+    overflow: hidden;
+    transition: background-color 0.5s;
+}
+.cardp:hover {
+    background-color: #ece6f5;
+}
+
+.cards {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #d8d3e0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    width: 94.4%;
+    transition: background-color 0.5s;
+}
+.cards:hover {
+    background-color: #ece6f5;
+}
+
+.h1card {
+    color: #2d2d3a;
+    font-size: 40px
+}
+.h2card {
+    color: #4a4a5a;
+    font-size: 30px;
+}
+a {
+    text-decoration: none;
+}
+#projects {
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+    background-color: #ebe7f0;
+    width: 45%;
+    height: 200px;
+    overflow: hidden;
+    overflow: auto;
+}
+#skills {
+    border-radius: 10px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+    background-color: #ebe7f0;
+    width: 45%;
+    height: 200px;
+    overflow: hidden;
+    overflow: auto;
+}
+#greeting {
+    position: relative;
+}
+
+.frieren-sit {
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+}
+.frieren-kiss {
+    position: absolute;
+    bot: 0;
+    right: 0;
+}
+.background-img {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
