@@ -64,6 +64,8 @@ header {
     margin: 10px;
     border-radius: 10px;
     padding: 15px;
+    padding-left: 23%;
+    padding-right: 23%;
     background-color: #d8d3e0;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
